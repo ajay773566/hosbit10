@@ -1,0 +1,278 @@
+/*
+Theme Name: Hosbit
+Theme URI: http://shtheme.org/demosd/hosbit
+Author: Shtheme
+Author URI: http://shtheme.com
+Description: Hosbit is a new modern WordPress theme for VPN & Cloud Services website. It is created for the individuals and companies who offer VPN, Cloud Services, VoIP, website, mobile apps, or any other hosting related services. Business including data hosting, VPN renting, web hosting, domain listing, domain selling, domain parking, domain for sale, business hosting, cloud hosting, VPS hosting, etc.
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: two-columns, three-columns, left-sidebar, right-sidebar, custom-background, custom-header, custom-menu, editor-style, featured-images, flexible-header, full-width-template, microformats, post-formats, rtl-language-support, sticky-post, theme-options, translation-ready
+Text Domain: hosbit
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+
+/* ========TABLE OF CONTENTS==========
+00. Body, links, hgroup, paragraphs, general styles
+01. Fixed header & Navigation
+02. Section Intro (Home)
+03. Section About
+04. Section Resume
+05. Section Portfolio
+06. Section Blog
+07. Section Contact
+08. Footer
+09. Loader
+10. Responsive design
+
+/*--------------------------------------------------
+    00. Body, links, hgroup, paragraphs, general styles
+---------------------------------------------------*/
+.comment-respond textarea {
+    width: 100%;
+    padding: 20px 20px;
+    border: none;
+    margin-bottom: 20px;
+    background: #f2f0ed;
+    height: 160px;
+    transition: .3s;
+    font-size: 14px;
+    color: #6c6c6c;
+}
+.comment-respond input {
+    width: 100%;
+    padding: 15px 20px;
+    border: none;
+    margin-bottom: 20px;
+    background: #f2f0ed;
+    color: #6c6c6c;
+    transition: .3s;
+    font-size: 14px;
+}
+
+p.comment-form-cookies-consent{
+    display: none;
+}
+.conatct-post-form p.form-submit input.submit{
+    background-image: linear-gradient(to right, #fb6d62 0%, #ffab6b 50%, #fb6d62 100%);
+    border-radius: 50px;
+    color: #fff;
+    padding: 20px 60px;
+    border: none;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0;
+    line-height: 1;
+    margin-bottom: 0;
+    text-align: center;
+    text-transform: uppercase;
+    background-size: 200% auto;
+    -webkit-transition: all 0.4s linear;
+    transition: all 0.4s linear;
+    vertical-align: middle;
+    white-space: nowrap;
+    box-shadow: 0px 3px 7.44px 0.56px rgba(0, 0, 0, 0.08);
+    width: auto;
+}
+.conatct-post-form p.form-submit input.submit:hover{
+    background-position: right center;
+}
+.widget_categories ul li{
+	margin-bottom: 10px;
+}
+.widget_categories ul li a {
+    padding: 15px 30px;
+    display: block;
+    color: #7f7f7f;
+    background: #f7f6f4;
+    position: relative;
+    font-size: 14px;
+    font-weight: 600;
+}
+.widget_categories ul li a:hover {
+    background: #fb6f63;
+    color: #ffffff;
+}
+ul.wp-tag-cloud{
+    display: flex;
+    flex-wrap: wrap;
+}
+.wp-tag-cloud a{
+    display: block;
+    background: #f3f1ee;
+    font-size: 14px!important;
+    color: #7d7d7d;
+    padding: 0 16px;
+    line-height: 35px;
+    border-radius: 5px;
+    height: 35px;
+    font-weight: 600;
+}
+.wp-tag-cloud li{
+	display: block;
+    margin-right: 9px;
+    margin-bottom: 10px;
+}
+.wp-tag-cloud a:hover {
+    background: #fb6f63;
+    color: #ffffff;
+}
+ul.pagination li span.current{
+    color: #fff;
+    display: block;
+    background-image: -webkit-linear-gradient( 21deg, rgb(251,109,98) 0%, rgb(255,171,107) 100%);
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 700;
+    padding: 0 18px;
+    position: relative;
+    width: 48px;
+    height: 48px;
+    line-height: 48px;
+    z-index: 1;
+    text-align: center;
+}
+.blog--post--meta ul li a{
+    text-transform: capitalize;
+}
+.search-custom form button {
+    border: 1px solid #fb6f63;
+    color: #fff;
+    font-size: 16px;
+    height: 49px;
+    position: relative;
+    width: 49px;
+    cursor: pointer;
+    float: right;
+    background: #fb6f63;
+    margin-top: -49px;
+    padding: 0;
+    letter-spacing: 0;
+}
+.search-custom form button:hover{
+    background: #fff;
+    border: 1px solid #fb6f63;
+    color: #fb6f63;
+}
+.search-custom form input{
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+}
+.error-page h3,
+.error-page h2{
+    color: #fff;
+    margin-bottom: 40px;
+}
+.newsletter-form input.wpcf7-submit{
+    position: absolute;
+    border: none;
+    right: 3px;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 16px 25px 16px 46px;
+    width: auto;
+}
+form.wpcf7-form br{
+    display: none;
+}
+div.wpcf7 .ajax-loader{
+    display: none;
+}
+.footer-style-three .newsletter-form input.wpcf7-submit{
+    background: #fb7063; 
+}
+.contact-form-wrap form input.wpcf7-submit{
+    background-image: linear-gradient(to right, #fb6d62 0%, #ffab6b 50%, #fb6d62 100%);
+    color: #fff;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 0;
+    box-shadow: 0px 3px 7.44px 0.56px rgba(0, 0, 0, 0.08);
+    width: auto;
+
+}
+.newsletter-form i{
+    position: absolute;
+    right: 110px;
+    color: #fff;
+    font-weight: 700;
+    top: 16px;
+}
+.contact-form-wrap form textarea{
+    height: 200px;
+}
+div.wpcf7-response-output{
+    margin: 10px 0 0 0 ;
+}
+.map{
+    margin-bottom: -8px;
+}
+.breadcrumb-content h2{
+    line-height: 1;
+}
+h3.comment-reply-title{
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+.blog-comment h3.widget-title{
+    font-weight: 600;
+    font-size: 28px;
+}
+.blog--post--meta ul li i{
+    color: #232323;
+}
+.search-custom h4{
+    font-weight: 600;
+}
+.blog-post-two .date{
+    color: #232323;
+}
+.blog--post--meta ul li,
+.blog--post--meta ul li a,
+.blog--post--content p,
+.comment-text p,
+.comment-avatar-info h5 span,
+.rc-post-content span{
+    color: #232323;
+}
+.comment-avatar-info h5 i{
+    margin-left: 10px;
+    font-size: 13px;
+}
+footer div.wpcf7-response-output{
+    color: #fff;
+}
+.related-tag ul li a{
+    font-weight: 600;
+}
+.elementor-column-gap-default>.elementor-row>.elementor-column>.elementor-element-populated {
+    padding: 0!important;
+}
+.elementor img{
+    max-width: unset!important;
+}
+.blog-post-avatar img{
+    border-radius: 50%!important;
+}
+.blog-post-tag a{
+    margin-right: 10px;
+}
+div.wpcf7 .screen-reader-response{
+    display: none!important;
+}
+.fw-post-content p{
+    margin-bottom: 0;
+}
+.home2 .domain-search-two .domain-search-form .btn{
+    background-color: #0cb885!important;
+    background-image: none;
+}
+.home2 .domain-search-two .domain-search-form .btn:hover{
+    background-color: #031a75!important;
+}
